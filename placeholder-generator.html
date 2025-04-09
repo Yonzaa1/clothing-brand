@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+        }
+        .placeholder {
+            width: 800px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a, #4a90e2);
+        }
+        .women {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+        }
+        .men {
+            background: linear-gradient(135deg, #4a90e2, #6aa9e8);
+        }
+        .accessories {
+            background: linear-gradient(135deg, #f5a623, #f7c068);
+        }
+        .instructions {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #3a7bc8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clothing Brand Placeholder Images</h1>
+    
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Right-click on each image below</li>
+            <li>Select "Save image as..."</li>
+            <li>Save with the filename shown (e.g., "hero-image.jpg")</li>
+            <li>Save to your project's "public" folder</li>
+        </ol>
+        <p>If you can't save directly as JPG, save as PNG and convert using an online tool or image editor.</p>
+    </div>
+    
+    <div class="container">
+        <div>
+            <div class="placeholder hero">
+                <div>HERO IMAGE</div>
+                <div style="font-size: 18px; margin-top: 10px;">Save as: hero-image.jpg</div>
+            </div>
+            <button onclick="captureImage(this.parentElement.querySelector('.placeholder'), 'hero-image.jpg')">Download Hero Image</button>
+        </div>
+        
+        <div>
+            <div class="placeholder women">
+                <div>WOMEN'S COLLECTION</div>
+                <div style="font-size: 18px; margin-top: 10px;">Save as: women.jpg</div>
+            </div>
+            <button onclick="captureImage(this.parentElement.querySelector('.placeholder'), 'women.jpg')">Download Women Image</button>
+        </div>
+        
+        <div>
+            <div class="placeholder men">
+                <div>MEN'S COLLECTION</div>
+                <div style="font-size: 18px; margin-top: 10px;">Save as: men.jpg</div>
+            </div>
+            <button onclick="captureImage(this.parentElement.querySelector('.placeholder'), 'men.jpg')">Download Men Image</button>
+        </div>
+        
+        <div>
+            <div class="placeholder accessories">
+                <div>ACCESSORIES</div>
+                <div style="font-size: 18px; margin-top: 10px;">Save as: accessories.jpg</div>
+            </div>
+            <button onclick="captureImage(this.parentElement.querySelector('.placeholder'), 'accessories.jpg')">Download Accessories Image</button>
+        </div>
+    </div>
+
+    <script>
+        function captureImage(element, filename) {
+            // This is a simplified version - in a real scenario, you'd use html2canvas or similar
+            alert(`To save this image:
+1. Right-click on the image
+2. Select "Save image as..."
+3. Name it "${filename}"
+4. Save to your project's "public" folder`);
+        }
+    </script>
+</body>
+</html> 
